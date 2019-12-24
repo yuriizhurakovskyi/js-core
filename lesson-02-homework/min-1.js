@@ -1,0 +1,10 @@
+var user = {};
+console.log(user);
+user.name = 'ПИЛИП';
+console.log(user);
+user.surname = 'ШЕВЧЕНКО';
+console.log(user);
+user.name = 'СЕРГІЙ';
+console.log(user);
+delete user.name;
+console.log(user);

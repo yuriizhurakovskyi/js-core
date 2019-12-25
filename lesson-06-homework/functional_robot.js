@@ -3,34 +3,41 @@ console.log('Functional\n');
 
 function Robot() {
 	let self = this;
+	let name = 'Robot';
+	let duty = 'working';
 
 	self.work = function() {
-		console.log("I'm Robot I am just working");
+		console.log("I'm " + name + " I am just " + duty);
+	}
+
+	self.setName = function(nameValue) {
+		name = nameValue;
+	}
+
+	self.setDuty = function(dutyValue) {
+		duty = dutyValue;
 	}
 }
 
 function CoffeRobot() {
 	Robot.call(this);
 	let self = this;
-	self.work = function() {
-		console.log("I'm CoffeRobot I am just brewing coffee");
-	}
+	self.setName('CoffeRobot');
+	self.setDuty('brewing coffee');
 }
 
 function RobotDancer() {
 	Robot.call(this);
 	let self = this;
-	self.work = function() {
-		console.log("I'm RobotDancer I am just dancing");
-	}
+	self.setName('RobotDancer');
+	self.setDuty('dancing');
 }
 
 function RobotCooker() {
 	Robot.call(this);
 	let self = this;
-	self.work = function() {
-		console.log("I'm RobotCooker I am just cooking");
-	}
+	self.setName('RobotCooker');
+	self.setDuty('cooking');
 }
 
 let robot = new Robot();

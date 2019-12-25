@@ -1,39 +1,48 @@
-"use strict";
 console.log('Prototype\n');
 
 function Robot() {
+	let name;
+	let duty;
 }
 
 Robot.prototype.work = function() {
-	console.log("I'm Robot I am just working");
+	console.log("I'm " + this.name + " I am just " + this.duty);
 }
+
+Robot.prototype.setName = function(nameValue) {
+	this.name = nameValue;
+}
+
+Robot.prototype.setDuty = function(dutyValue) {
+	this.duty = dutyValue;
+}
+
+Robot.prototype.setName(Robot.name);
+Robot.prototype.setDuty('working');
 
 function CoffeRobot() {
 }
 
 CoffeRobot.prototype = Object.create(Robot.prototype);
 CoffeRobot.prototype.constructor = CoffeRobot;
-CoffeRobot.prototype.work = function() {
-	console.log("I'm CoffeRobot I am just brewing coffee");
-}
+CoffeRobot.prototype.setName(CoffeRobot.name);
+CoffeRobot.prototype.setDuty('brewing coffee');
 
 function RobotDancer() {
 }
 
 RobotDancer.prototype = Object.create(Robot.prototype);
 RobotDancer.prototype.constructor = RobotDancer;
-RobotDancer.prototype.work = function() {
-	console.log("I'm RobotDancer I am just dancing");
-}
+RobotDancer.prototype.setName(RobotDancer.name);
+RobotDancer.prototype.setDuty('dancing');
 
 function RobotCooker() {
 }
 
 RobotCooker.prototype = Object.create(Robot.prototype);
 RobotCooker.prototype.constructor = RobotCooker;
-RobotCooker.prototype.work = function() {
-	console.log("I'm RobotCooker I am just cooking");
-}
+RobotCooker.prototype.setName(RobotCooker.name);
+RobotCooker.prototype.setDuty('cooking');
 
 let robot = new Robot();
 robot.work();

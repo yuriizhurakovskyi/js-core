@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Red references</title>
+<script src="2.js"></script>
+<style>
+.external-red {
+	background-color: red
+}
+
+a[name="list"] {
+	line-height: 1.5;
+	display: block;
+	font-size: xx-large;
+	margin-left: auto;
+	margin-right: auto;
+	width: 2em;
+	color: #696969;
+}
+
+ul {
+	line-height: 1.5;
+	list-style: none;
+	margin-left: auto;
+	margin-right: auto;
+	width: 12em
+}
+
+li>a {
+	text-decoration: none;
+	font-size: 18px;
+}
+
+#fill-in-red {
+	line-height: 1.5;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 1em;
+	margin: 5px;
+	padding: 10px 18px;
+	border: none;
+	cursor: pointer;
+	font-size: 19px;
+	color: white;
+	background: #696969;
+}
+</style>
+<script src="1.js"></script>
+</head>
+<body>
+	<a name="list">List</a>
+	<ul>
+		<li><a href="http://google.com">http://google.com</a></li>
+		<li><a href="/tutorial">/tutorial.html</a></li>
+		<li><a href="local/path">local/path</a></li>
+		<li><a href="ftp://ftp.com/my.zip">ftp://ftp.com/my.zip</a></li>
+		<li><a href="http://nodejs.org">http://nodejs.org</a></li>
+		<li><a href="http://internal.com/test">http://internal.com/test</a></li>
+	</ul>
+	<button id="fill-in-red" onclick="fillInRed()">Fill in red all
+		external references</button>
+</body>
+</html>

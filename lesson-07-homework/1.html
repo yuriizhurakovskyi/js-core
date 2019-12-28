@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>First task list</title>
+<script src="1.js"></script>
+<style type="text/css">
+#fill-button {
+	line-height: 1.5;
+	position: relative;
+	left: 50%;
+	transform: translate(-50%, 0);
+	border-radius: 1em;
+	margin: 5px;
+	padding: 10px 18px;
+	border: none;
+	cursor: pointer;
+	font-size: 18px;
+	color: white;
+	background: #696969;
+}
+
+ul {
+	line-height: 1.5;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	text-align: center;
+}
+
+#count-of-elements {
+	line-height: 1.5;
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+	text-align: center;
+}
+</style>
+</head>
+<body>
+	<ul id="first-list">
+		<li class="first"></li>
+		<li class="second"></li>
+	</ul>
+	<br>
+
+	<ul id="second-list">
+		<li class="first"></li>
+		<li class="second"></li>
+		<li class="third"></li>
+	</ul>
+	<br>
+
+	<ul id="third-list">
+		<li class="first"></li>
+	</ul>
+	<br>
+
+	<button id="fill-button" onclick="fillWithNewData()">Fill
+		lists with new data</button>
+	<h1 id="count-of-elements"></h1>
+</body>
+</html>

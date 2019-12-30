@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Vertical navigation bar</title>
+<style>
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif
+}
+
+.container {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	list-style: none;
+	-webkit-box-pack: center;
+	-ms-flex-pack: center;
+	justify-content: center;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+	position: relative;
+}
+
+.container li {
+	background: #483D8B;
+	width: 200px;
+	position: relative;
+}
+
+a {
+	color: white;
+	display: block;
+	padding: 10px;
+	text-decoration: none;
+	margin: 0;
+	padding: 10px;
+	width: 100%;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	text-align: center;
+}
+
+a:hover {
+	background: lightgreen;
+	border: 1px ridge #483D8B;
+}
+
+.submenu li {
+	list-style: none;
+	background: #6A5ACD;
+}
+</style>
+</head>
+<body>
+	<ul class="container">
+		<li><a href="#" id="heading">Університет</a>
+			<ul id="menu" class="submenu">
+				<li><a href="#">Кафедра ІСМ</a></li>
+				<li><a href="#">Кафедра ЕСМ</a></li>
+				<li><a href="#">Кафедра ІКНІ</a></li>
+				<li><a href="#">Кафедра політології</a></li>
+			</ul></li>
+	</ul>
+	<script src="max.js"></script>
+</body>
+</html>
